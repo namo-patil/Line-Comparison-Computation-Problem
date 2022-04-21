@@ -6,6 +6,7 @@ public class LineComparison {
     public static void main(String[] args) {
         System.out.println("Welcome to Line Comparison Computation Program");
         checkEqualityOfTwoLines();
+        compareTwoLines();
     }
 
     static String calLengthOfLine() {
@@ -24,5 +25,13 @@ public class LineComparison {
         String line2 = calLengthOfLine();
         System.out.println("---Equals Method---");
         System.out.println(line1.equals(line2));
+    }
+
+    // s1=s2 => returns 0,  s1>s2 => returns +ve value,  s1<s2 => returns -ve value
+    static void compareTwoLines() {
+        String line1 = calLengthOfLine();
+        String line2 = calLengthOfLine();
+        System.out.println("---CompareTo Method---");
+        System.out.println(line1.compareTo(line2));
     }
 }
