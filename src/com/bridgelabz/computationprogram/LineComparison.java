@@ -9,7 +9,7 @@ public class LineComparison {
         compareTwoLines();
     }
 
-    static String calLengthOfLine() {
+    private static String calLengthOfLine() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the value of co-ordinates x1, y1, x2, y2 :");
         int x1 = scanner.nextInt(), y1 = scanner.nextInt(), x2 = scanner.nextInt(), y2 = scanner.nextInt();
@@ -20,18 +20,31 @@ public class LineComparison {
     }
 
     // Prints true => equals, and Prints false => distinct
-    static void checkEqualityOfTwoLines() {
+    private static void checkEqualityOfTwoLines() {
         String line1 = calLengthOfLine();
         String line2 = calLengthOfLine();
         System.out.println("---Equals Method---");
-        System.out.println(line1.equals(line2));
+        if(line1.equals(line2) == true){
+            System.out.println("both line-1 and line-2 are equal");
+        }
+        else {
+            System.out.println("both line-1 and line-2 are different");
+        }
     }
 
     // s1=s2 => returns 0,  s1>s2 => returns +ve value,  s1<s2 => returns -ve value
-    static void compareTwoLines() {
+    private static void compareTwoLines() {
         String line1 = calLengthOfLine();
         String line2 = calLengthOfLine();
         System.out.println("---CompareTo Method---");
-        System.out.println(line1.compareTo(line2));
+        if(line1.compareTo(line2) == 0){
+            System.out.println("both line-1 and line-2 are equal");
+        }
+        else if (line1.compareTo(line2) > 0){
+            System.out.println("line-1 is greater than line-2");
+        }
+        else {
+            System.out.println("line-1 is smaller than line-2");
+        }
     }
 }
